@@ -1,0 +1,1705 @@
+/*
+	Theme Name: Hueman Child
+	Theme URL: http://alxmedia.se/themes/hueman/
+	Description: Thème enfant du thème Hueman par AlxMedia.
+	Author: David Grand
+	Author URL: http://blogdummi.fr
+	Template: hueman
+	Version: 1.0.0
+*/
+
+@import url("../hueman/style.css");
+
+/* GENERAL
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------*/
+
+h1,
+h2 {
+    font-family: 'Bitter', serif;
+    font-weight: 700 !important;
+}
+
+.main {
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+}
+
+.button {
+    background-color: #eb3;
+    color: #FFF;
+    border-radius: 4px;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.button .circle {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+    z-index: 5;
+    background: rgba(255, 255, 255, .35);
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+    -moz-transform: translateX(-50%) translateY(-50%) scale(0);
+    -ms-transform: translateX(-50%) translateY(-50%) scale(0);
+    -webkit-transform: translateX(-50%) translateY(-50%) scale(0);
+    transform: translateX(-50%) translateY(-50%) scale(0);
+    -moz-animation: circleBtn .8s;
+    -webkit-animation: circleBtn .8s;
+    animation: circleBtn .8s
+}
+
+@keyframes circleBtn {
+    0% {
+        opacity: 1
+    }
+    100% {
+        -moz-transform: translateX(-50%) translateY(-50%) scale(2.5);
+        -ms-transform: translateX(-50%) translateY(-50%) scale(2.5);
+        -webkit-transform: translateX(-50%) translateY(-50%) scale(2.5);
+        transform: translateX(-50%) translateY(-50%) scale(2.5)
+    }
+}
+
+@-moz-keyframes circleBtn {
+    0% {
+        opacity: 1
+    }
+    100% {
+        -moz-transform: translateX(-50%) translateY(-50%) scale(2.5);
+        -ms-transform: translateX(-50%) translateY(-50%) scale(2.5);
+        -webkit-transform: translateX(-50%) translateY(-50%) scale(2.5);
+        transform: translateX(-50%) translateY(-50%) scale(2.5)
+    }
+}
+
+@-ms-keyframes circleBtn {
+    0% {
+        opacity: 1
+    }
+    100% {
+        -moz-transform: translateX(-50%) translateY(-50%) scale(2.5);
+        -ms-transform: translateX(-50%) translateY(-50%) scale(2.5);
+        -webkit-transform: translateX(-50%) translateY(-50%) scale(2.5);
+        transform: translateX(-50%) translateY(-50%) scale(2.5)
+    }
+}
+
+@-o-keyframes circleBtn {
+    0% {
+        opacity: 1
+    }
+    100% {
+        -moz-transform: translateX(-50%) translateY(-50%) scale(2.5);
+        -ms-transform: translateX(-50%) translateY(-50%) scale(2.5);
+        -webkit-transform: translateX(-50%) translateY(-50%) scale(2.5);
+        transform: translateX(-50%) translateY(-50%) scale(2.5)
+    }
+}
+
+@-webkit-keyframes circleBtn {
+    0% {
+        opacity: 1
+    }
+    100% {
+        -moz-transform: translateX(-50%) translateY(-50%) scale(2.5);
+        -ms-transform: translateX(-50%) translateY(-50%) scale(2.5);
+        -webkit-transform: translateX(-50%) translateY(-50%) scale(2.5);
+        transform: translateX(-50%) translateY(-50%) scale(2.5)
+    }
+}
+
+.button:hover {
+    background-color: #eb3 !important;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 2px 2px 0;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 2px 0;
+    -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 2px 0;
+    opacity: 0.85;
+}
+
+
+/* HEADER
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------*/
+
+#header {
+    background-image: url('/wp-content/uploads/2014/07/bg-mmi.jpg');
+}
+
+
+/* SEARCH INPUT
+-------------------------------------------------------------------------------*/
+
+
+/*
+
+.toggle-search {
+    color:#fff !important;
+    width: 25px;
+    height: 38px;
+    border-radius: 100%;
+    background: #eb3;
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    z-index: 9;
+    top: -35px;
+    transition: all 0.3s ease-in-out;
+}
+
+.toggle-search:hover {
+    box-shadow: 1px 1px 6px rgba(0,0,0,0.6);
+    background: #eb3;
+}
+
+.toggle-search:active, .toggle-search.active {
+    background: #eb3;
+}
+
+.toggle-search .fa {
+    margin-top: 10px;
+    margin-left: 3px;
+}
+
+
+.search-expand {
+    top: -190px;
+    height: 300px;
+    padding: 3%;
+    margin-top: 10%;
+    width: 100%;
+    background-color: #eb3 !important;
+    transform: translate(40px, 0px);
+    transition: all 0.3s ease-in-out;
+}
+
+.search-expand-inner {
+    background: none;
+    padding-top: 150px;
+}
+
+.search-expand-inner form .search {
+    color: #fff;
+    font-size: 54px;
+    border: 0;
+    background: transparent;
+    -webkit-appearance: none;
+    box-sizing: border-box;
+    outline: 0;
+    font-weight: 200;
+}
+
+#header .search-expand-inner .themeform.searchform div input {
+    padding-left: 6%;
+}
+
+#header .search-expand-inner .themeform input[type="text"]:focus{
+    border-color: none;
+    color:#fff;
+    -webkit-box-shadow: 0 0 3px rgba(0,0,0,0);
+    box-shadow: 0 0 3px rgba(0,0,0,0);
+}
+
+#header .search-expand-inner .themeform.searchform div:after{
+    color: #fff;
+    font-size: 60px;
+    left: 10px;
+    top: 36px;
+} 
+
+*/
+
+
+/* MENU
+-------------------------------------------------------------------------------*/
+
+
+/* Top Menu
+------------------------------------------------*/
+
+.nav > li > a {
+    padding: 13px 14px 12px;
+}
+
+#nav-topbar.nav-container {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5), 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.nav-wrap {
+    background: #fff;
+}
+
+
+/* Page en cours */
+
+#nav-topbar .nav li.current_page_item > a,
+#nav-topbar .nav li.current-menu-item > a {
+    color: #eebb33;
+    border-bottom: 3px solid #eebb33;
+}
+
+#nav-topbar .nav li.current_page_item > a:hover,
+#nav-topbar .nav li.current-menu-item > a:hover {
+    color: #eebb33;
+    border-bottom: 3px solid #eebb33;
+}
+
+
+/* autres liens de page */
+
+#nav-topbar .nav li a {
+    color: #333;
+    font-size: 14px;
+    font-weight: 400;
+    border-bottom: 3px solid white;
+    font-weight: bold;
+}
+
+#nav-topbar .nav li a:hover {
+    color: #666;
+    border-bottom: 3px solid #DDD;
+    background-color: #FFF !important;
+}
+
+#nav-topbar .nav li.current-post-parent > a {
+    color: #eebb33;
+    border-bottom: 3px solid #eebb33;
+}
+
+.fa-graduation-cap {
+    margin-right: 6px;
+}
+
+.fa-cubes {
+    margin-right: 4px;
+}
+
+.offre-notif {
+    background-color: #F44336;
+    color: #fff;
+    font-size: 11px;
+    padding: 0px 5px;
+    border-radius: 3px;
+    margin-left: 3px;
+    position: relative;
+    float: right;
+}
+
+
+/* Topbar dropdown Menu
+-----------------------*/
+
+#nav-topbar .nav ul {
+    background: white;
+}
+
+#nav-topbar .nav ul li a {
+    border-bottom: 0;
+    border-left: 3px solid white;
+}
+
+#nav-topbar .nav ul li a:hover {
+    border-left: 3px solid #DDD;
+    border-bottom: 0;
+}
+
+
+/* Quand je suis dans une catégorie, l'onglet "Catégories" est ... */
+
+#nav-topbar .nav li.current-menu-ancestor > a {
+    border-bottom: 3px solid #eebb33;
+    color: #eebb33;
+}
+
+
+/* Quand je suis dans une catégorie, l'onglet de la catégorie est ... */
+
+#nav-topbar .nav ul li.current-menu-item>a {
+    color: #eb3;
+    border-left: 3px solid #eb3;
+    border-bottom: 0;
+}
+
+
+/* Quand je survole une catégorie dans le dropdow */
+
+#nav-topbar .nav ul li.current_page_item > a:hover {
+    border-left: 3px solid #eebb33;
+    color: #eebb33;
+}
+
+
+/* Quand je survole la catégorie current dans le dropdow */
+
+#nav-topbar .nav ul li.current-menu-item>a:hover {
+    color: #eb3;
+    border-left: 3px solid #eb3;
+    border-bottom: 0;
+}
+
+
+/* Quand je survole dans le dropdown, l'onglet parent est ... */
+
+.nav > li:hover > a,
+.nav > li > a:hover {
+    background-color: white !important;
+    color: #666 !important;
+    border-bottom: 3px solid #DDD !important;
+}
+
+.nav > li.current-menu-item:hover > a,
+.nav > li.current-menu-item > a:hover {
+    border-bottom: 3px solid #eb3 !important;
+    color: #eb3 !important;
+}
+
+
+/* Quand je suis sur un article, l'onglet de la catégorie est ... */
+
+#nav-topbar .nav ul li.current-post-parent>a {
+    color: #eb3;
+    border-left: 3px solid #eb3;
+    border-bottom: 0;
+}
+
+
+/* Quand je survole la catégorie de l'article ou je suis, c'est ... */
+
+#nav-topbar .nav ul li.current-post-parent>a:hover {
+    border-left: 3px solid #eb3;
+}
+
+
+/* Header Menu
+------------------------------------------------*/
+
+#nav-header.nav-container {
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05), 0 -1px 3px rgba(0, 0, 0, 0.2), inset 1px 0 0 rgba(0, 0, 0, 0.2), inset -1px 0 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 3 rgba(255, 255, 255, 0.05), 0 -1px 0 rgba(0, 0, 0, 0.2), inset 1px 0 0 rgba(0, 0, 0, 0.2), inset -1px 0 0 rgba(0, 0, 0, 0.2);
+}
+
+.nav > li > a {
+    padding: 13px 14px 12px;
+}
+
+#nav-header.nav-container {
+    /*box-shadow: 0 0 5px rgba(0,0,0,0.5), 0 1px 0 rgba(255,255,255,0.15);*/
+}
+
+
+/* Page en cours */
+
+#nav-header .nav li.current_page_item > a,
+#nav-header .nav li.current-menu-item > a {
+    color: #eebb33;
+    border-top: 3px solid #eebb33;
+}
+
+#nav-header .nav li.current_page_item > a:hover,
+#nav-header .nav li.current-menu-item > a:hover {
+    color: #eebb33;
+    border-top: 3px solid #eebb33;
+}
+
+
+/* autres liens de page */
+
+#nav-header .nav li a {
+    color: #333;
+    font-size: 14px;
+    font-weight: 400;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    font-weight: bold;
+}
+
+#nav-header .nav li a:hover {
+    color: #666;
+    border-top: 3px solid #DDD;
+    background-color: #FFF !important;
+}
+
+#nav-header .nav li.current-post-parent > a {
+    color: #eebb33;
+    border-top: 3px solid #eebb33;
+}
+
+
+/* Child Menu
+------------------------------------------------*/
+
+.sidebar .child-menu .current_page_item {
+    border-left: 3px solid #eb3;
+}
+
+
+/* ARTICLE
+-------------------------------------------------------------------------------*/
+
+
+/* CONTENT
+------------------------------------------------*/
+
+.page-title {
+    text-transform: none;
+}
+
+.search-results .page-title h1,
+.search-results .page-title h2,
+.page-title h1,
+.page-title h2 {
+    font-family: "Titillium", Arial, sans-serif;
+}
+
+.entry h2 {
+    font-size: 28px;
+    letter-spacing: 0;
+}
+
+.entry h3 {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.entry h4 {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+.entry a {
+    font-weight: bold;
+}
+
+.entry a:visited {
+    opacity: 0.4;
+}
+
+.entry pre {
+    background: none;
+}
+
+pre.prettyprint {
+    border-radius: 3px;
+    background-color: #f3f3f3;
+    padding: 7px;
+    margin-bottom: 15px;
+}
+
+span.script {
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    background-color: #f3f3f3;
+    padding: 2px 4px;
+    font-size: 14px;
+    color: #c91;
+    font-family: Monaco, "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
+    box-sizing: border-box;
+    white-space: nowrap;
+}
+
+.key {
+    display: inline-block;
+    color: #aaa;
+    font: bold 9pt arial;
+    text-decoration: none;
+    text-align: center;
+    width: auto;
+    padding-top: 4px;
+    padding-bottom: 3px;
+    padding-right: 7px;
+    padding-left: 7px;
+    margin: 5px;
+    background: #eff0f2;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border-top: 1px solid #f5f5f5;
+    -webkit-box-shadow: inset 0 0 25px #e8e8e8, 0 1px 0 #c3c3c3, 0 2px 0 #c9c9c9, 0 2px 3px #333;
+    -moz-box-shadow: inset 0 0 25px #e8e8e8, 0 1px 0 #c3c3c3, 0 2px 0 #c9c9c9, 0 2px 3px #333;
+    box-shadow: inset 0 0 25px #e8e8e8, 0 1px 0 #c3c3c3, 0 2px 0 #c9c9c9, 0 2px 3px #333;
+    text-shadow: 0px 1px 0px #f5f5f5;
+}
+
+
+.alx-tab img,
+.alx-posts img,
+.post-thumbnail img,
+.image-container img {
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+
+/* IMAGES 
+------------------------------------------------*/
+
+.entry .wp-caption {
+    background: #fff;
+    padding-top: 0px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+}
+
+.entry .wp-caption img {
+    width: 100% !important;
+    max-width: none !important;
+    border-radius: 3px 3px 0 0;
+    border: none;
+}
+
+.entry .wp-caption-text {
+    padding: 0 5px 8px 10px !important;
+    line-height: 20px !important;
+    text-align: left;
+    font-style: normal;
+}
+
+.post-format .image-container .image-caption {
+    display: none;
+}
+
+.entry img {
+    border-radius: 3px;
+    border: 1px solid #ddd;
+}
+
+.entry .no-border {
+    border-radius: 0px;
+    border: 0px solid #ddd;
+}
+
+
+/* VIDEO
+------------------------------------------------*/
+
+.entry .video-container {
+    margin-bottom: 20px;
+}
+
+/* SWIPEBOX
+------------------------------------------------*/
+
+#swipebox-overlay {
+    background-image: url('/wp-content/uploads/2014/07/BLOGDUMMI_Logo_WhiteTR_1500_v2-e1406655905322.png');
+    background-repeat: no-repeat;
+    background-size: 300px;
+    background-position-x: 20px;
+    background-position-y: 20px;
+}
+
+#swipebox-close {
+    width: 100%;
+    height: 100%;
+    background-position: top right;
+    right: -80px;
+    top: 20px;
+}
+
+
+
+/* TABLEPRESS
+------------------------------------------------*/
+.tablepress thead th {
+    background-color: #eb3 !important;
+    color: white;
+}
+
+
+/* CLICK TO TWEET
+------------------------------------------------*/
+
+.tm-click-to-tweet {
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: #66AADD;
+    border-radius: 4px;
+    transition: linear 0.2s all;
+    border: 0;
+}
+
+.tm-click-to-tweet:hover {
+    box-shadow: rgba(0, 0, 0, 0.2) 0 2px 2px 0;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 2px 0;
+    -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 2px 0;
+    opacity: 0.85;
+}
+
+.tm-click-to-tweet .tm-ctt-text a,
+.tm-click-to-tweet p .tm-ctt-btn,
+.tm-click-to-tweet .tm-ctt-text a:hover,
+.tm-click-to-tweet p .tm-ctt-btn:hover {
+    color: #fff;
+}
+
+.tm-click-to-tweet a.tm-ctt-btn {
+    background: url('https://4.bp.blogspot.com/-JsBK9mPEjWo/VHjB2OUI-uI/AAAAAAAAEyA/NteFI3uXm9U/s1600/twitter-little-bird-white.png') no-repeat right top;
+    height: 16px;
+    padding-top: 3px;
+}
+
+/* ARTICLE SPONSO
+------------------------------------------------*/
+
+.sponso {
+   font-size: 14px;
+   color: #CCC;
+}
+
+/* NOTATION - KK STAR RATINGS
+------------------------------------------------*/
+
+.kk-star-ratings {
+    height: 85px;
+}
+
+.kk-star-ratings:before {
+    content: "Note-nous !";
+    font-weight: bold;
+    font-size: 16px;
+}
+
+
+/* FANCIER AUTHOR BOX
+------------------------------------------------*/
+
+
+
+.ts-fab-tab {
+    position: relative;
+}
+
+.ts-fab-list li.active {
+    border: 0;
+    border-bottom: 3px solid #eb3;
+    color: #eb3;
+}
+
+.ts-fab-list li.active:hover {
+    border-bottom: 3px solid #eb3;
+}
+
+.ts-fab-list li {
+    border: 0;
+    border-bottom: 3px solid white;
+    color: white;
+}
+
+.ts-fab-list li:hover {
+    border-bottom: 3px solid #ddd;
+}
+
+.ts-fab-list li a {
+    background-image: none;
+}
+
+.ts-fab-list li.ts-fab-latest-posts-link a,
+.ts-fab-list li.ts-fab-bio-link a,
+.ts-fab-list li.ts-fab-latest-posts-link.active a,
+.ts-fab-list li.ts-fab-bio-link.active a {
+    padding-left: 12px;
+}
+
+.ts-fab-avatar>img {
+    border-radius: 3px;
+}
+
+.ts-fab-wrapper {
+    margin: 2em 0 0 0;
+}
+
+.ts-fab-wrapper img {
+    border-radius: 2px;
+}
+
+.ts-fab-social-links {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+}
+
+.ts-fab-text {
+    width: 70%;
+}
+
+.ts-fab-header h4 {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: none;
+    padding-top: 0;
+}
+
+.ts-fab-content {
+    font-size: 16px;
+    padding-right: 20px;
+}
+
+.ts-fab-description {
+    font-size: 14px;
+}
+
+.ts-fab-latest {
+    margin: 15px 0 !important;
+}
+
+.ts-fab-latest li {
+    line-height: 1;
+    font-size: 15px;
+}
+
+
+/* A LIRE ÉGALEMENT / VIDEO
+------------------------------------------------*/
+
+.thumb-icon {
+    width: 35px !important;
+    background: none repeat scroll 0% 0% #cc0000;
+    box-shadow: none;
+    transform: rotate(-0deg);
+    box-shadow: 0px 2px 0px #990000;
+}
+
+.thumb-icon i {
+    transform: rotate(-0deg);
+}
+
+.thumb-icon .fa-play {
+    margin: 0px 0px 0px 0px;
+}
+
+.post-hover:hover .thumb-icon {
+    background: #990000;
+    color: #fff;
+}
+
+.alx-posts li:hover .thumb-icon {
+    background: #990000;
+    color: #fff;
+}
+
+.alx-tab li:hover .thumb-icon {
+    background: #990000;
+    color: #fff;
+}
+
+
+/* OPEN SOCIAL SHARING
+-------------------------------------------------------------------------------*/
+.page .oss_horizontal_share {
+	padding: 30px 0;
+}
+
+.page-id-2982 .oss_horizontal_share, .page-id-4699 .oss_horizontal_share {
+	padding: 20px 30px 15px;
+}
+
+
+
+
+/* WP JOB MANAGER
+-------------------------------------------------------------------------------*/
+
+
+/* LISTE DES OFFRES
+------------------------------------------------*/
+
+.page-id-4699 article {
+    margin-top: -20px;
+}
+
+.page-id-4699 .pad {
+    padding: 0px;
+}
+
+.page-id-4699 .page-title {
+    padding-top: 18px;
+    padding-bottom: 17px;
+    padding-left: 20px;
+}
+
+
+/* FILTRE ------------------------*/
+
+.job_filters .showing_jobs {
+    background: transparent;
+}
+
+.showing_jobs span:first-child {
+    display: none;
+}
+
+.job_filters .showing_jobs a {
+    float: left;
+    padding-bottom: 5px;
+}
+
+
+/* LISTE ------------------------*/
+
+ul.job_listings li.job_listing {
+    border-left: 3px solid transparent;
+}
+
+ul.job_listings li.job_listing:hover {
+    border-left: 3px solid #eb3;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+ul.job_listings li.job_listing a img.company_logo {
+    width: 55px;
+    height: 55px;
+}
+
+ul.job_listings li.job_listing a div.position {
+    padding: 0 0 0 60px;
+}
+
+ul.job_listings li.job_listing:hover a div.position h3 {
+    opacity: .85;
+}
+
+ul.job_listings li.job_listing a div.position .company .tagline {
+    display: none;
+}
+
+ul.job_listings .job_listing .job-type {
+    color: #eb3;
+}
+
+ul.job_listings li.job_listing .meta .job-type {
+    background-color: #F44336;
+    color: #fff;
+    display: inline-block;
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-size:16px;
+}
+
+
+ul.job_listings li.job_listing .meta .apprentissage {
+    background-color: #e47;
+}
+
+ul.job_listings li.job_listing .meta .contrat-pro {
+    background-color: #f71;
+}
+
+ul.job_listings li.job_listing .meta .cdi {
+    background-color: #29f;
+}
+
+
+ul.job_listings li.job_listing .meta .cdd {
+    background-color: #a4b;
+}
+
+
+
+
+.job_filters ul.job_types li label {
+    background-color: #F44336;
+    color: #fff;
+    display: inline-block;
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-size:14px;
+}
+
+.job_filters ul.job_types li label:hover {
+    cursor:pointer;
+}
+
+
+.job_filters ul.job_types li .apprentissage {
+    background-color: #e47;
+}
+
+.job_filters ul.job_types li .contrat-pro {
+    background-color: #f71;
+}
+
+.job_filters ul.job_types li .cdi {
+    background-color: #29f;
+}
+
+
+.job_filters ul.job_types li .cdd {
+    background-color: #a4b;
+}
+
+.themeform .job_filters input[type="checkbox"]:hover {
+    cursor:pointer;
+}
+
+
+/* POSTE SINGLE
+------------------------------------------------*/
+
+.entry .job_listings ul li,
+.entry .job_listings ol ul li,
+.entry .single_job_listing .meta li,
+.entry {
+    list-style: none;
+}
+
+.job_listing .post-byline,
+.job_listing #ts-fab-below,
+.single-job_listing .related-posts,
+.single-job_listing .pad .heading {
+    display: none;
+}
+
+.job_listing .single_job_listing .meta .job-type {
+    border-radius: 4px;
+}
+
+.single_job_listing .company .tagline {
+    padding: 0 0 0 1.7em;
+}
+
+.single_job_listing .meta li {
+    margin: 0;
+    padding: .3em .6em;
+}
+
+.single-job_listing .single_job_listing .meta .apprentissage {
+    background-color: #e47;
+}
+
+.single-job_listing .single_job_listing .meta .contrat-pro {
+    background-color: #f71;
+}
+
+.single-job_listing .single_job_listing .meta .cdi {
+    background-color: #29f;
+}
+
+
+.single-job_listing .single_job_listing .meta .cdd {
+    background-color: #a4b;
+}
+
+
+.single_job_listing .application .application_button,
+.job_application .button {
+    color: #FFF;
+    -webkit-appearance: none;
+    background-color: #eb3;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px !important;
+    font-weight: bold;
+    text-transform: uppercase;
+    vertical-align: middle;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.single_job_listing .application .application_button,
+.job_application button:hover {
+    background-color: #eb3 !important;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 2px 2px 0;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 2px 0;
+    -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 2px 0;
+    opacity: 0.85;
+}
+
+.single_job_listing .meta .apprentissage {
+    background-color: #e47;
+    border-radius: 4px;
+}
+
+.single_job_listing .meta .contrat-pro {
+    background-color: #f71;
+    border-radius: 4px;
+}
+
+.single_job_listing .meta .cdi {
+    background-color: #29f;
+    border-radius: 4px;
+}
+
+.single_job_listing .meta .cdd {
+    background-color: #a4b;
+    border-radius: 4px;
+}
+
+.single_job_listing .meta .job-type {
+    background-color: #F44336;
+}
+
+
+
+/* POSTER UNE OFFRE
+------------------------------------------------*/
+
+.job-manager-form .account-sign-in {
+    margin-top: 4px;
+}
+
+.job-manager-form .account-sign-in .button {
+    font-size: 14px;
+    padding: 4px 12px;
+}
+
+.job-manager-form .account-sign-in:hover .button {
+    color: #fff;
+}
+
+#submit-job-form fieldset:first-child {
+    display: none;
+}
+
+#submit-job-form p .button {
+	float:right;
+	font-size: 16px;
+}
+
+
+/* PREVISUALISER - POSTER UNE OFFRE
+------------------------------------------------*/
+
+.job_listing_preview_title {
+    background: transparent;
+}
+
+.job_listing_preview_title h2 {
+    font-family: "Titillium Web", Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.job_listing_preview {
+    border: 0px;
+}
+
+job_preview_submit_button {
+    margin-left-10px;
+}
+
+
+/* WIDGET - LISTE DES OFFRES DE STAGE
+------------------------------------------------*/
+
+.sidebar ul.job_listings li.job_listing {
+    border-left: 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.sidebar ul.job_listings li.job_listing:hover {
+    border-left: 0;
+}
+
+.sidebar .rp4wp-related-job_listing>ul li.job_listing a:focus,
+.sidebar .rp4wp-related-job_listing>ul li.job_listing a:hover,
+.sidebar .rp4wp-related-job_listing>ul li.no_job_listings_found a:focus,
+.sidebar .rp4wp-related-job_listing>ul li.no_job_listings_found a:hover,
+.sidebar ul.job_listings li.job_listing a:focus,
+.sidebar ul.job_listings li.job_listing a:hover,
+.sidebar ul.job_listings li.no_job_listings_found a:focus,
+.sidebar ul.job_listings li.no_job_listings_found a:hover {
+    background-color: transparent;
+}
+
+.sidebar ul.job_listings .meta .location:after,
+.sidebar ul.job_listings .meta .company {
+    display: none !important;
+}
+
+.sidebar ul.job_listings .meta .job-type {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1px 0px 0px 5px !important;
+    font-size: 12px;
+    text-transform: uppercase;
+    background-color: #F44336;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.sidebar ul.job_listings .meta .location {
+    margin: 2px 0px 0px 53px !important;
+}
+
+.sidebar ul.job_listings .job-type-cdi .meta .location {
+    margin: 2px 0px 0px 37px !important;
+}
+
+.sidebar ul.job_listings .job-type-cdd .meta .location {
+    margin: 2px 0px 0px 41px !important;
+}
+
+.sidebar ul.job_listings .job-type-apprentissage .meta .location {
+    margin: 2px 0px 0px 105px !important;
+}
+
+
+.sidebar ul.job_listings .meta {
+    position: relative;
+
+}
+
+.sidebar ul.job_listings li.job_listing .meta .job-type {
+    font-size: 12px;
+}
+
+.sidebar ul.job_listings .meta .apprentissage {
+    background-color: #e47;
+}
+
+.sidebar ul.job_listings .meta .contrat-pro {
+    background-color: #f71;
+}
+
+.sidebar ul.job_listings .meta .cdi {
+    background-color: #29f;
+}
+
+.sidebar ul.job_listings .meta .cdd {
+    background-color: #a4b;
+}
+
+.widget ul.job_listings .job-type-contrat-pro ul.meta .location {
+    padding-left: 40px;
+}
+
+.sidebar ul.job_listings li.job_listing:hover {
+    box-shadow: none;
+    opacity: .85;
+}
+
+
+
+/* PAGE 404
+-------------------------------------------------------------------------------*/
+
+.img_404 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 404px;
+}
+
+
+/* POP UP
+-------------------------------------------------------------------------------*/
+
+#inPopUp {
+    text-align: center;
+    padding: 50px;
+    background-image: url(images/...);
+    border-radius: 5px;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.4);
+    box-sizing: border-box;
+}
+
+#inPopUp h1 {
+    font-size: 1.25em;
+}
+
+a#spmCloseButton {
+    top: 0;
+    right: 0;
+    background: url(images/spm-close-icon.png) top left no-repeat transparent;
+}
+
+
+/* FOOTER
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------*/
+
+#footer {
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+    background: #fff;
+}
+
+
+/* MENUS
+-------------------------------------------------------------------------------*/
+
+.widget > ul li:before,
+.widget > ul li a:before,
+.widget > div > ul li a:before,
+.widget_calendar caption:before {
+    display: none!important;
+}
+
+
+/* CREDITS
+-------------------------------------------------------------------------------*/
+
+#footer-bottom #credit {
+    font-size: 10px;
+    text-transform: uppercase;
+    line-height: 1.6em;
+}
+
+
+/* BACK TO TOP MATERIAL
+-------------------------------------------------------------------------------*/
+
+#footer-bottom #back-to-top {
+    background: #eebb33;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px !important;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    margin-top: -30px;
+    right: 10%;
+    z-index: 99;
+}
+
+#footer-bottom #back-to-top:hover {
+    color: white;
+    box-shadow: 0.5px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+#footer-bottom #back-to-top i {
+    font-size: 27px;
+    top: 14px;
+    font-weight: bold;
+}
+
+#footer-bottom #back-to-top:hover i {
+    opacity: 0.8;
+}
+
+
+/* COOKIE BAR
+------------------------------------------------------------------------------  */
+#cookie-law-info-bar {
+	box-shadow: 0px 0px 5px rgba(0,0,0,0.1) !important;
+}
+
+#cookie-law-info-bar .cli-plugin-button {
+    	background:none;
+    	border-radius:2px;
+    	-moz-border-radius: 2px;
+    	-webkit-border-radius: 2px;
+    	text-shadow: none;
+    	box-shadow: none;
+    	border-bottom: 0;
+}
+
+#cookie-law-info-bar .cli-plugin-button:hover {
+    	text-decoration:none;
+}
+
+#cookie-law-info-bar .cli-plugin-main-link {
+	font-weight: bold;
+}
+
+
+    /* LA REDAC
+	------------------------------------------------*/
+    
+    ul.team-member-socials {
+        margin: 10px !important;
+    }
+    
+    .entry .team-position {
+    font-size: 18px;
+    }
+
+    .entry .team-member-other-info li{
+    list-style:none !important;
+    }
+
+    ul.team-member-other-info {
+    padding-left: 0px; 
+    }
+
+    ul.team-member-other-info li i {
+    margin-right: 7px;
+    }
+
+    ul.team-member-socials {
+      margin: 14px !important;
+    }
+
+    ul.team-member-socials li {
+      margin: 3px!important;
+    }
+
+    ul.team-member-socials li a {
+      border-radius: 3px;
+    }
+
+    .team-member-info .rounded {
+            border: solid 0px #fff !important;
+            -webkit-border-radius: 10px !important;
+            -moz-border-radius: 10px !important;
+            border-radius: 10px !important;
+    }
+
+
+/* RESPONSIVE
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------*/
+
+
+/* GENERAL
+-------------------------------------------------------------------------------*/
+
+
+/* Top Menu Responsive
+------------------------------------------------*/
+
+.toggle-search {
+    color: #666;
+}
+
+#nav-topbar .nav-toggle,
+#nav-header .nav-toggle {
+    color: #666;
+}
+
+#nav-header .nav-toggle {
+    -webkit-box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0), -1px 0 0 rgba(0, 0, 0, 0);
+    box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0), -1px 0 0 rgba(0, 0, 0, 0);
+}
+
+@media screen and (max-width: 960px) and (min-width: 480px) {
+    .col-2cl.s1-expand .s1,
+    .col-3cm.s2-expand .s2 {
+        box-shadow: -3px 0 15px rgba(0, 0, 0, 0.3);
+    }
+    .col-2cr.s1-expand .s1,
+    .col-3cm.s1-expand .s1 {
+        box-shadow: 3px 0 15px rgba(0, 0, 0, 0.3);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    /* Offres de stage
+	------------------------------------------------*/
+   	ul.job_listings li.job_listing a div.position {
+        	padding: 0px;
+    	}
+
+	ul.job_listings li.job_listing .meta .job-type {
+    		padding: 0px 5px;
+    		font-size: 10px;
+		font-weight:normal !important;
+	}
+}
+
+@media screen and (max-width: 719px) {
+    /* H1 et H2
+	------------------------------------------------*/
+    .single .post-title {
+        font-size: 30px;
+    }
+    .entry h2 {
+        font-size: 20px;
+    }
+    .entry h3 {
+        font-size: 16px;
+    }
+    .entry h4 {
+        font-size: 13px;
+    }
+
+    /* SEARCH INPUT
+	------------------------------------------------*/
+    .toggle-search.active {
+        background: #eb3;
+    }
+    .search-expand {
+        left: -50px;
+        right: 0;
+        top: 0;
+        width: 100%;
+    }
+    .search-expand-inner {
+        padding: 0;
+        float: left;
+        margin-top: -44px;
+        margin-left: 60px;
+    }
+    .themeform.searchform div:after {
+        display: none;
+    }
+    .themeform.searchform div input {
+        padding-left: 8px;
+    }
+    .themeform input[type="text"]:focus {
+        -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.0);
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.0);
+    }
+    /* Topbar Menu
+	------------------------------------------------*/
+    #nav-topbar .nav li a {
+        border-bottom: 0 !important;
+        border-left: 3px solid white;
+    }
+    #nav-topbar .nav li a:hover {
+        color: #eb3 !important;
+        border-bottom: 0 !important;
+        border-left: 3px solid #ddd;
+    }
+    #nav-topbar .nav li.current-menu-item a {
+        border-bottom: 0;
+        border-left: 3px solid #eb3;
+    }
+    #nav-topbar .nav li.current-menu-item > a {
+        border-bottom: 0;
+        border-left: 3px solid #eb3;
+    }
+    #nav-topbar .nav li.current-post-parent {
+        border-left: 3px solid #eb3;
+    }
+    #nav-topbar .nav li.current-post-parent > a {
+        border-bottom: 0;
+        background: none;
+    }
+    #nav-topbar .nav li:hover {
+        border-bottom: 0;
+        border-left: 0;
+    }
+    #nav-topbar .nav li.current-menu-ancestor>a {
+        border-bottom: 0 !important;
+    }
+    #nav-topbar .nav li.current-menu-ancestor>a:hover {
+        color: #eb3 !important;
+    }
+    /* Submenu */
+    #nav-topbar .nav li a:hover {
+        color: #666 !important;
+    }
+    #nav-topbar .nav li.current_page_item {
+        border-bottom: 0;
+    }
+    #nav-topbar .nav li.current-menu-item {
+        border-bottom: 0;
+        border-left: 0 !important;
+    }
+    #nav-topbar .nav li.current_page_item > a,
+    #nav-topbar .nav li.current-menu-item > a,
+    #nav-topbar .nav li.current-post-parent > a {
+        background: white;
+    }
+    #nav-topbar .nav li.current_page_item > a,
+    #nav-topbar .nav li.current-menu-item > a {
+        border-bottom: 0 !important;
+    }
+    #nav-topbar .nav ul li a {
+        padding: 13px 14px 12px;
+    }
+    #nav-topbar .nav ul li.current-menu-item a {
+        border-bottom: 0;
+        border-left: 3px solid #eb3;
+    }
+    #nav-topbar .nav ul li.current-menu-item a:hover {
+        border-bottom: 0;
+        border-left: 3px solid #eb3;
+    }
+    #nav-topbar .nav ul li.current-menu-item>a {
+        border-left: 0;
+    }
+    #nav-topbar .nav ul li.current-menu-item>a:hover {
+        color: #eb3 !important;
+        border-left: 0;
+    }
+    #nav-topbar .nav ul li.current-post-parent>a {
+        border-left: 0;
+    }
+    #nav-topbar .nav ul li.current-post-parent>a:hover {
+        border-left: 0;
+    }
+    #nav-topbar .nav > li.current-menu-item:hover > a,
+    #nav-topbar .nav > li.current-menu-item > a:hover {
+        color: #eb3 !important;
+    }
+    /* Quand je suis sur un article, l'onglet de la catégorie est ... */
+    #nav-topbar .nav li.current-post-parent>a {
+        color: #eb3;
+        border-left: 0;
+        border-bottom: 0;
+    }
+    #nav-topbar .nav li.current-post-parent>a:hover {
+        color: #eb3;
+    }
+    #nav-topbar .nav li.current-post-parent:hover {
+        border-left: 3px solid #eb3;
+    }
+    /* Header Menu
+	------------------------------------------------*/
+    #nav-header .nav li a {
+        border-bottom: 0;
+    }
+    #nav-header .nav li.current-post-parent {
+        border-left: 3px solid #eebb33;
+    }
+    #nav-header .nav li.current-post-parent > a {
+        border-bottom: 0;
+        background: none;
+    }
+    #nav-header .nav li:hover {
+        border-bottom: 0;
+        border-left: 3px solid #eebb33;
+    }
+    #nav-header .nav li a:hover {
+        border-bottom: 0;
+    }
+    #nav-header .nav li.current_page_item > a,
+    #nav-header .nav li.current-menu-item > a,
+    #nav-header .nav li.current-post-parent > a {
+        background: white;
+    }
+    #nav-header .nav li.current_page_item > a,
+    #nav-header .nav li.current-menu-item > a {
+        border-bottom: 0;
+    }
+    #nav-header .nav li.current_page_item,
+    #nav-header .nav li.current-menu-item {
+        border-bottom: 0;
+        border-left: 3px solid #eebb33;
+    }
+    #nav-header .nav li.current_page_item > a,
+    #nav-header .nav li.current-menu-item>a {
+        color: #eb3;
+        border-color: #DDD;
+        border-top: 3px solid #fff;
+    }
+    #nav-header .nav li:hover {
+        color: #666;
+        border-top: 0;
+        border-left: 3px solid #DDD;
+        background-color: #FFF !important;
+    }
+    #nav-header .nav li a:hover {
+        border-top: 3px solid #fff;
+    }
+    @media screen and (min-width: 720px) {
+        nav .ul {
+            top: 48px !important;
+            -webkit-box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.15) !important;
+            box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.15) !important;
+        }
+    }
+}
+
+@media screen and (max-width: 530px) {
+    /* FANCIER AUTHOR BOX
+	------------------------------------------------*/
+    .ts-fab-social-links {
+        position: relative;
+        top: 10px;
+        right: 0px;
+        left: 15px;
+        width: 50px;
+    }
+    /* LA REDAC
+	------------------------------------------------*/
+    
+    ul.team-member-socials {
+        margin: 10px !important;
+    }
+    
+    
+    
+    /* SWIPEBOX
+	------------------------------------------------*/
+    #swipebox-overlay {
+        background-size: 200px;
+        background-position-x: 10px;
+        background-position-y: 15px;
+    }
+    #swipebox-close {
+        right: -75px;
+    }
+	/* WIDGET OFFRES DE STAGE
+	------------------------------------------------*/
+	.sidebar ul.job_listings li.job_listing a .meta li {
+    		font-size: 1.3em;
+	}
+}
+
+
+/* PUBS
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------*/
+
+
+/* PUB PUBLIER UNE OFFRE
+-------------------------------------------------------------------------------*/
+
+.textwidget .pub {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.textwidget .pub-interne {
+    background: url(/wp-content/uploads/2014/07/bg-mmi.jpg);
+}
+
+.textwidget .pub-offre-stage i {
+    text-align: center;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.textwidget .pub-offre-stage p {
+    text-align: center;
+}
+
+.textwidget .pub-offre-stage h3 {
+    font-size: 23px;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.textwidget .pub-offre-stage .description {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.textwidget .button,
+.textwidget .button:hover {
+    color: #FFF;
+    padding: 8px 12px;
+}
+
+
+/* PUB VIDE
+-------------------------------------------------------------------------------*/
+
+.textwidget .vide {
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    border: 3px dashed;
+}
+
+.ripple {
+    position: relative;
+    overflow: hidden
+}
+
+.ripple .circle {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+    z-index: 5;
+    background: rgba(255, 255, 255, .35);
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+    -moz-transform: translateX(-50%) translateY(-50%) scale(0);
+    -ms-transform: translateX(-50%) translateY(-50%) scale(0);
+    -webkit-transform: translateX(-50%) translateY(-50%) scale(0);
+    transform: translateX(-50%) translateY(-50%) scale(0);
+    -moz-animation: circleBtn .8s;
+    -webkit-animation: circleBtn .8s;
+    animation: circleBtn .8s
+}

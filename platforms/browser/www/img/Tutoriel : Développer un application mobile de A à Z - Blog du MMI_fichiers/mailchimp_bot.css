@@ -1,0 +1,294 @@
+/*
+** Written by Vincent CAMERANO
+** https://twitter.com/maximaLzdnb
+** v1.0
+*/
+
+#subscribe-newsletter-form, .subscribe-newsletter-form {
+	position: relative;
+}
+
+#subscribe-newsletter-form input[type='email'], .subscribe-newsletter-form input[type='email'] {
+	width: 100%;
+	line-height: 20px;
+	position: relative;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border-color: #CCC;
+	background: none repeat scroll 0% 0% #FFF;
+	border: 2px solid #DDD;
+	color: #999;
+	display: block;
+	max-width: 100%;
+	box-shadow: none;
+	outline: medium none;
+	padding: 7px 8px;
+	font-size: 14px;
+	-webkit-transition: all 2.s ease-in-out;
+	-o-transition: all 2.s ease-in-out;
+	-ms-transition: all 2.s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+	transition: all 2.s ease-in-out;
+	padding-left: 26px;
+}
+
+.subscribe-newsletter-form input[type='email'] {
+	padding-left: 26px !important;
+}
+
+#subscribe-newsletter-form input[type='email']:focus, .subscribe-newsletter-form input[type='email']:focus  {
+	box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
+}
+
+#subscribe-newsletter h3, .subscribe-newsletter h3 {
+	margin-left: 30px;
+	display: block;
+}
+
+#subscribe-newsletter-form div, .subscribe-newsletter-form div {
+	position: relative;
+}
+
+#subscribe-newsletter-form div:first-of-type:after, .subscribe-newsletter-form div:first-of-type:after  {
+	color: #CCC;
+	line-height: 24px;
+	font-size: 14px;
+	content: "\f003";
+	position: absolute;
+	left: 8px;
+	top: 8px;
+	z-index: 1;
+	font-family: FontAwesome;
+}
+
+#subscribe-newsletter-form input[type='submit'], .subscribe-newsletter-form input[type='submit'] {
+	width: 100%;
+	-webkit-appearance: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 5px 30px !important;
+	cursor: pointer;
+	border-radius: 3px;
+	background: #EB3 !important;
+	font-weight: bold;
+	font-size: 14px;
+	margin-top: 14px !important;
+	margin-bottom: 14px !important;
+	color: rgba(255, 255, 255, 0.8) !important;
+	border: none;
+	text-transform: uppercase;
+	-webkit-transition: all 2.s ease-in-out;
+	-o-transition: all 2.s ease-in-out;
+	-ms-transition: all 2.s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+	transition: all 2.s ease-in-out;
+}
+
+#subscribe-newsletter-form input[type='submit']:hover, .subscribe-newsletter-form input[type='submit']:hover {
+	color: rgba(255,255,255, 1) !important;
+}
+
+#loader-icon, #loader-icon-sc {
+	position: absolute;
+	font-size: 24px;
+	z-index: 4;
+	-webkit-transform: rotate(40deg);
+	-ms-transform: rotate(40deg);
+	-o-transform: rotate(40deg);
+	transform: rotate(40deg);
+	top: 6px;
+	left: 6px;
+	animation: loader 2s infinite;
+	-o-animation: loader 2s infinite;
+	-moz-animation: loader 2s infinite;
+	-ms-animation: loader 2s infinite;
+	-webkit-animation: loader 2s infinite;
+	display: none;
+}
+
+#subscribe-newsletter-form .cloud, .subscribe-newsletter-form .cloud {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(255,255,255, .8);
+	z-index: 2;
+	display: none;
+}
+
+#subscribe-newsletter-form .message-newsletter, .subscribe-newsletter-form .message-newsletter {
+	display: block;
+	margin: 14px 0;
+}
+
+@-ms-keyframes loader {
+	0% {
+		left: 6px;
+		-webkit-transform: rotate(40deg);
+		-ms-transform: rotate(40deg);
+		-o-transform: rotate(40deg);
+		transform: rotate(40deg);
+	}
+
+	40% {
+		left: calc(100% - 32px);
+		-webkit-transform: rotate(40deg);
+		-ms-transform: rotate(40deg);
+		-o-transform: rotate(40deg);
+		transform: rotate(40deg);
+	}
+
+	50% {
+		left: calc(100% - 32px);
+		-webkit-transform: rotate(220deg);
+		-ms-transform: rotate(220deg);
+		-o-transform: rotate(220deg);
+		transform: rotate(220deg);
+	}
+
+	90% {
+		left: 6px;
+		-webkit-transform: rotate(220deg);
+		-ms-transform: rotate(220deg);
+		-o-transform: rotate(220deg);
+		transform: rotate(220deg);
+	}
+
+	100% {
+		-webkit-transform: rotate(40deg);
+		-ms-transform: rotate(40deg);
+		-o-transform: rotate(40deg);
+		transform: rotate(40deg);
+		left: 6px;
+	}
+}
+
+@-o-keyframes loader {
+	0% {
+		left: 6px;
+		-webkit-transform: rotate(40deg);
+		-ms-transform: rotate(40deg);
+		-o-transform: rotate(40deg);
+		transform: rotate(40deg);
+	}
+
+	40% {
+		left: calc(100% - 32px);
+		-webkit-transform: rotate(40deg);
+		-ms-transform: rotate(40deg);
+		-o-transform: rotate(40deg);
+		transform: rotate(40deg);
+	}
+
+	50% {
+		left: calc(100% - 32px);
+		-webkit-transform: rotate(220deg);
+		-ms-transform: rotate(220deg);
+		-o-transform: rotate(220deg);
+		transform: rotate(220deg);
+	}
+
+	90% {
+		left: 6px;
+		-webkit-transform: rotate(220deg);
+		-ms-transform: rotate(220deg);
+		-o-transform: rotate(220deg);
+		transform: rotate(220deg);
+	}
+
+	100% {
+		-webkit-transform: rotate(40deg);
+		-ms-transform: rotate(40deg);
+		-o-transform: rotate(40deg);
+		transform: rotate(40deg);
+		left: 6px;
+	}
+}
+
+@-webkit-keyframes loader {
+	0% {
+		left: 6px;
+		-webkit-transform: rotate(40deg);
+		-ms-transform: rotate(40deg);
+		-o-transform: rotate(40deg);
+		transform: rotate(40deg);
+	}
+
+	40% {
+		left: calc(100% - 32px);
+		-webkit-transform: rotate(40deg);
+		-ms-transform: rotate(40deg);
+		-o-transform: rotate(40deg);
+		transform: rotate(40deg);
+	}
+
+	50% {
+		left: calc(100% - 32px);
+		-webkit-transform: rotate(220deg);
+		-ms-transform: rotate(220deg);
+		-o-transform: rotate(220deg);
+		transform: rotate(220deg);
+	}
+
+	90% {
+		left: 6px;
+		-webkit-transform: rotate(220deg);
+		-ms-transform: rotate(220deg);
+		-o-transform: rotate(220deg);
+		transform: rotate(220deg);
+	}
+
+	100% {
+		-webkit-transform: rotate(40deg);
+		-ms-transform: rotate(40deg);
+		-o-transform: rotate(40deg);
+		transform: rotate(40deg);
+		left: 6px;
+	}
+}
+
+
+@-moz-keyframes loader {
+	0% {
+		left: 6px;
+		-webkit-transform: rotate(40deg);
+		-ms-transform: rotate(40deg);
+		-o-transform: rotate(40deg);
+		transform: rotate(40deg);
+	}
+
+	40% {
+		left: calc(100% - 32px);
+		-webkit-transform: rotate(40deg);
+		-ms-transform: rotate(40deg);
+		-o-transform: rotate(40deg);
+		transform: rotate(40deg);
+	}
+
+	50% {
+		left: calc(100% - 32px);
+		-webkit-transform: rotate(220deg);
+		-ms-transform: rotate(220deg);
+		-o-transform: rotate(220deg);
+		transform: rotate(220deg);
+	}
+
+	90% {
+		left: 6px;
+		-webkit-transform: rotate(220deg);
+		-ms-transform: rotate(220deg);
+		-o-transform: rotate(220deg);
+		transform: rotate(220deg);
+	}
+
+	100% {
+		-webkit-transform: rotate(40deg);
+		-ms-transform: rotate(40deg);
+		-o-transform: rotate(40deg);
+		transform: rotate(40deg);
+		left: 6px;
+	}
+}
